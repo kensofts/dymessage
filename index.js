@@ -154,9 +154,9 @@ const Barrage = class {
         }
 
         result = Object.assign(result, this.getUser(msg.user))
+        console.log(msg)
         switch (msg.common.method) {
-            case 'WebcastGiftMessage':
-                console.log(msg)
+            case 'WebcastGiftMessage':                
                 result = Object.assign(result, {
                     // repeatCount: parseInt(),
                     msg_content: msg.common.describe,
